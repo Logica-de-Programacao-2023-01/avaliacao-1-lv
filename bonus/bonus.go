@@ -9,23 +9,24 @@ package bonus
 import "sort"
 
 func CalculateTowers(barLengths []int) (int, int) {
+	maior_maior_torre := 1
+	maior_torre := 1
+	num_torres := len(barLengths)
 	sort.Ints(barLengths)
-	unicobarra := make(map[int]bool)
+	elemento := 0
+	for elemento < (len(barLengths) - 1) {
+		if barLengths[elemento] == barLengths[elemento+1] {
+			maior_torre += 1
+			if maior_torre > maior_maior_torre && maior_torre > 1 {
+				maior_maior_torre = maior_torre
+			}
+			num_torres -= 1
 
-	for_, length := range barLengths {
-		unicobarra[length] = true
+		} else {
+			maior_torre = 1
+		}
+		elemento++
 	}
-	contador := make(map[int]int)
-	for_, length := range barLengths {
-		contador[length]++,
-	}
-	numerotorre := len(unicobarra)
-	var maxaltura int
 
-	for_, contar := range contador {
-		if contar > maxaltura {
-		maxaltura = contar
-	}
-	}
-	return maxaltura, numerotorre
+	return maior_maior_torre, num_torres
 }
