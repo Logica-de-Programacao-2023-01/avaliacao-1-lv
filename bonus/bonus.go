@@ -23,7 +23,7 @@ func CalculateTowers(barLengths []int) (int, int) {
 	var maxaltura int
 
 	for_, contar := range contador {
-		if contar > max altura {
+		if contar > maxaltura {
 		maxaltura = contar
 	}
 	}
