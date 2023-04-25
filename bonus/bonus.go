@@ -6,8 +6,6 @@ package bonus
 //Joãozinho quer construir o menor número possível de torres com as barras que tem. Você deve ajudar Joãozinho a usar as
 //barras da melhor maneira possível, determinando a altura da torre mais alta e quantas torres podem ser construídas.
 
-package awesomeProject
-
 import "sort"
 
 func CalculateTowers(barLengths []int) (int, int) {
