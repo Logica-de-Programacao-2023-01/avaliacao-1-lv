@@ -20,7 +20,7 @@ func DivideWatermelon(weight int) (bool, error) {
 		return false, fmt.Errorf("erro ")
 	}
 	par := false
-	if weight%2 == 2 {
+	if weight == 2 {
 		par = false
 		return false, nil
 	}
