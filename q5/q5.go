@@ -13,6 +13,7 @@ package q5
 //programa na sequência de caracteres inicial.
 //
 //Ajude Pedro a lidar com esta tarefa fácil.
+import "strings"
 
 func ProcessString(s string) string {
 	result := ""
